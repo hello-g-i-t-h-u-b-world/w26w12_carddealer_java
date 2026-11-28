@@ -5,6 +5,11 @@ public record Card(
         String suit
 ) {
     public String imageName() {
-        return rank + "_of_" + suit + ".png";
+        if(rank.equals("jack") || rank.equals("queen") || rank.equals("king")) {
+            return rank + "_of_" + suit + "2.png";
+        }
+        else{
+            return rank + "_of_" + suit + ".png";
+        }
     }
 }
